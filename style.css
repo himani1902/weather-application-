@@ -1,0 +1,156 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #c974a8, #feb47b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.app-main {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.4);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.searchInputbox {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: white;
+}
+
+.input-box {
+    width: 100%;
+    padding: 10px 10px 10px 35px; 
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    font-size: 16px;
+}
+
+.weather-box {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 25px;
+    margin-top: 25px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.4);
+}
+
+.city, .date, .weather, .temp, .min-max, .description {
+    margin: 10px 0;
+}
+
+.weather-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.temp {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.clouds-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    background: url('image.png');
+    background-blend-mode: screen;
+}
+
+.clouds-image {
+    max-width: 100%;
+    height: auto;
+    opacity: 0.7;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    background-color: transparent;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .app-main {
+        padding: 30px;
+        width: 90%;
+    }
+
+    .temp {
+        font-size: 32px;
+    }
+
+    .input-box {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .app-main {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .temp {
+        font-size: 28px;
+    }
+
+    .input-box {
+        padding: 8px 8px 8px 30px;
+        font-size: 12px;
+    }
+
+    .weather-top, .weather-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .city, .date, .weather, .temp, .min-max, .description {
+        text-align: center;
+    }
+}
